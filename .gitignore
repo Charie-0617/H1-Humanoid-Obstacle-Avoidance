@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Local heavy deps (install per README)
+miniconda3/
+IsaacLab/
+models_hf/
+
+# Training / rendering artifacts
+runs/
+logs/
+*.log
+assets/dataset/raw/
+yolov8n.pt
+
+# Render frame sequences
+assets/demo/frames/
+assets/demo/frames_*/
+
+# ROS2 deploy build outputs
+deploy_ros2/build/
+deploy_ros2/install/
+deploy_ros2/log/
+deploy_ros2/onnxruntime-linux-x64-1.29.0/
+deploy_ros2/sim/*.png
+deploy_ros2/sim/*.mp4
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Personal notes (job research, not for public repo)
+岗位调研报告.md

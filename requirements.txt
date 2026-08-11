@@ -1,0 +1,9 @@
+# Additional deps. Isaac Sim / Isaac Lab / torch follow docs/环境搭建.md (official installer).
+ultralytics==8.4.127
+transformers==4.57.6
+bitsandbytes==0.50.1
+onnx==1.22.0
+onnxruntime==1.28.0
+numpy
+pillow
+opencv-python

@@ -1,0 +1,45 @@
+{
+  "robot": "Unitree H1",
+  "note": "关节顺序来自 Windows 侧 Isaac Lab 实测（dof_names）。此顺序 = ONNX 动作输出 19 维顺序 = 观测中关节位置/速度的排列顺序。",
+  "obs_dim": 69,
+  "act_dim": 19,
+  "normalization": false,
+  "action_scale": 0.5,
+  "joint_names": [
+    "left_hip_yaw", "right_hip_yaw", "torso",
+    "left_hip_roll", "right_hip_roll",
+    "left_shoulder_pitch", "right_shoulder_pitch",
+    "left_hip_pitch", "right_hip_pitch",
+    "left_shoulder_roll", "right_shoulder_roll",
+    "left_knee", "right_knee",
+    "left_shoulder_yaw", "right_shoulder_yaw",
+    "left_ankle", "right_ankle",
+    "left_elbow", "right_elbow"
+  ],
+  "default_pos": [
+    0.0, 0.0, 0.0,
+    0.0, 0.0,
+    0.28, 0.28,
+    -0.28, -0.28,
+    0.0, 0.0,
+    0.79, 0.79,
+    0.0, 0.0,
+    -0.52, -0.52,
+    0.52, 0.52
+  ],
+  "obs_layout": {
+    "base_lin_vel": [0, 3],
+    "base_ang_vel": [3, 6],
+    "projected_gravity": [6, 9],
+    "velocity_commands": [9, 12],
+    "joint_pos_rel": [12, 31],
+    "joint_vel": [31, 50],
+    "last_action": [50, 69]
+  },
+  "action": {
+    "type": "joint_position_target",
+    "formula": "joint_target = default_pos + 0.5 * action",
+    "publish_topic": "joint_cmd",
+    "publish_msg": "sensor_msgs/JointState"
+  }
+}

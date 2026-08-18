@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>h1_policy_deploy</name>
+  <version>0.1.0</version>
+  <description>H1 人形 PPO 策略部署节点：ONNX Runtime 推理 + ROS2 收发（观测 69 维 / 动作 19 维）</description>
+  <maintainer email="chen@example.com">chen</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>geometry_msgs</depend>
+  <depend>sensor_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
